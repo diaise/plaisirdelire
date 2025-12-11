@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenue sur mon site!{% endblock %}
+
+{% block body %}
+    <div class="pop">
+        <h1>Bienvenue sur mon site</h1>
+        {{include('home/realisations.html.twig')}}
+    </div>
+{% endblock %}

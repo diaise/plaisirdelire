@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier User{% endblock %}
+
+{% block body %}
+    <h1>Modifier User</h1>
+
+    {{ include('profile/_form.html.twig', {'button_label': 'Update'}) }}
+
+{% endblock %}

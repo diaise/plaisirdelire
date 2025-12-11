@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Categorie{% endblock %}
+
+{% block body %}
+    <h1>{{ categorie.name }}</h1>
+
+    <a href="{{ path('app_categorie_index') }}">retourner à la liste des catégories</a>
+
+    <div>
+     <table class="table">
+        <thead>
+            <tr>
+                <th>Article</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for article in articles %}
+            <tr>
+                <td><img src="{{ vich_uploader_asset(article,'imageFile') }}"></td>
+                <td>{{ article.title }}</td>
+                <td>
+                    <a href="{{ path('app_article_show', {'id': article.id}) }}">consulter</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

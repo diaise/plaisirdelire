@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+   
+}
+
+.pop{
+   
+    flex-grow: 1;  
+}
+
+.realisation-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    
+}
+.realisation{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    
+}
+
+.formation{
+    width: 20vw;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    
+}
